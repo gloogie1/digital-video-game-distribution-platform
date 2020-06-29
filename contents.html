@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	background-image: url("conback.jpg");
+}
+
+
+.button {
+	background-color:green;
+    border: black;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	transition:all 0.5s;
+    margin: 4px 2px;
+    cursor: pointer;
+	outline:none;
+	box shadow:0 0 4px #999;
+}
+ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:active{
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 8px;
+  right: -5px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 16px;
+  padding-left:8px;
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.button2 {background-color: blue;} 
+.button3 {background-color: red;}
+.button4 {background-color: gray; color: black;}	
+.button5 {background-color: black}
+</style>
+</head>
+<body>
+<html>
+<header>
+	<title>TABLE OF CONTENTS</TITLE>
+</header>
+<p>
+	<ul style="list-style-type:none">
+		<li><a href="datamining.html" target="disp"><button class="button" onclick="dmFunction()">Data Mining</button></a>
+			<p id="dmc"></p>
+			<script>
+				var arr=[0,0,0]
+				var dmcount = 0;
+				function incdmcount(){
+					dmcount++;
+					arr[0]++;
+				}
+				function dmFunction(){
+					incdmcount();
+					document.getElementById("dmc").innerHTML = "Datamining page visited: "+dmcount+" times";
+				}
+				document.cookie="dmcount=dmcount;expires=(now.getTime()+3600*10);"	
+			</script>
+		</li>
+		<li><a href="predicting.html" target="disp"><button class="button" onclick="predFunction()">Predicting</button></a>
+			<p id="predc"></p>
+			<script>
+				var predcount = 0;
+				function incpredcount(){
+					predcount++;
+					arr[1]++;
+				}
+				function predFunction(){
+					incpredcount();
+					document.getElementById("predc").innerHTML = "Predicting page visited "+predcount+" times";
+				}
+				document.cookie='predcount='+predcount+';expires='+(now.getTime()+3600*10);
+			</script>
+		</li>
+		<li><a href="generate.html" target="disp"><button class="button" onclick="genFunction()">Generate Data</button></a>
+			<p id="genc"></p>
+			<script>
+				var gencount = 0;
+				function incgencount(){
+					gencount++;
+					arr[2]++;
+				}
+				function genFunction(){
+					incgencount();
+					document.getElementById("genc").innerHTML = "Generate Data page visited: "+gencount+" times";
+				}
+				document.cookie='gencount='+gencount+';expires='+(now.getTime()+3600*10);
+			</script>
+		</li>
+		<li><a href="css.html" target="disp"><button class="button" onclick="cssFunction()">CSS</button></a>
+			<p id="cssc"></p>
+			<script>
+				var csscount = 0;
+				function inccsscount(){
+					csscount++;
+					arr[3]++;
+				}
+				function cssFunction(){
+					inccsscount();
+					document.getElementById("cssc").innerHTML = "CSS page visited: "+csscount+" times";
+				}
+				document.cookie='csscount='+csscount+';expires='+(now.getTime()+3600*10);
+			</script>
+		</li>
+		<li><a href="pictures.html" target="disp"><button class="button" onclick="picFunction()">Pictures</button></a>
+			<p id="picc"></p>
+			<script>
+				var piccount = 0;
+				function incpiccount(){
+					piccount++;
+					arr[4]++;
+				}
+				function picFunction(){
+					incpiccount();
+					document.getElementById("picc").innerHTML = "Generate Data visited: "+piccount+" times";
+				}
+				document.cookie='csscount='+piccount+';expires='+(now.getTime()+3600*10);
+			</script>
+		</li>
+		<li><a id="mvpage" onclick="mvp()" target="disp"><button class="button button3">Frequently visited</button></a>
+			<script>
+				var arr=[dmcount,predcount,gencount,csscount,piccount]
+				function mvp(){
+					var a=document.getElementById("mvpage");
+					if(arr[0]>=arr[1] && arr[0]>=arr[2] && arr[0]>=arr[3] && arr[0]>=arr[4]){
+						a.href="datamining.html";	
+					}else if(arr[1]>arr[0] && arr[1]>=arr[2] && arr[1]>=arr[3] && arr[1]>=arr[4]){
+						a.href="predicting.html";
+					}else if(arr[2]>arr[0] && arr[2]>arr[1] && arr[2]>=arr[3] && arr[2]>=arr[4]){
+						a.href="generate.html";
+					}else if(arr[3]>arr[0] && arr[3]>arr[1] && arr[3]>arr[2] && arr[3]>=arr[4]){
+						a.href="css.html";
+					}else if(arr[4]>arr[0] && arr[4]>arr[1] && arr[4]>arr[2] && arr[4]>arr[3]){
+						a.href="pictures.html";
+					}
+				}
+			</script>
+		</li>
+	</ul>
+</p>
+</html>

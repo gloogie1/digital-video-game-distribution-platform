@@ -1,0 +1,49 @@
+<html>
+<style>
+fieldset{
+	background-image:url('scroll.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: 120% 120%;
+}
+body{
+  background-image: url('wowwall.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 100% 100%;	
+}
+form{
+	margin: 0 auto;	
+	width: 250px;
+	margin-top:15%;
+}
+body.old{
+	font-style:italic;
+	color: yellow;
+	font-weight: bold;
+}
+</style>	
+<body class=old>
+<form id='login' action='login.php' method='post' 
+    accept-charset='UTF-8'>
+	
+<fieldset>
+<legend>LOGIN</legend>
+<label for='username' >UserName</label>
+<br>
+<input type='text' name='username' id='username' maxlength="50" />
+<br>
+<label for='password' >Password</label>
+<br>
+<input type='password' name='password' id='password' maxlength="50" />
+<br>
+<input type='submit' name='Submit' value='Login' />
+<a href="forgotlogin.html" target="_blank"><button class="button">forgot login</button></a>
+			<p id="forgot"></p>
+
+</fieldset>
+</font>
+</form>
+</html>

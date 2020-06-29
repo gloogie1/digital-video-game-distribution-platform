@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  background-image: url('scroll.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 200% 120%;	
+}
+
+.button {
+	background-color:green;
+    border: black;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	transition:all 0.5s;
+    margin: 4px 2px;
+    cursor: pointer;
+	outline:none;
+	box shadow:0 0 4px #999;
+}
+ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:active{
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+button:after {
+  content: ' >';
+  position: absolute;
+  opacity: 0;  
+  top: 8px;
+  right: -5px;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 16px;
+  padding-left:8px;
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.button2 {background-color: blue;} 
+.button3 {background-color: red;}
+.button4 {background-color: gray; color: black;}	
+.button5 {background-color: black}
+</style>
+</head>
+<body>
+<html>
+<p>
+	<ul style="list-style-type:none">
+		<li><a href="home.html" target="disp"><button class="button">Game Portal</button></a>
+			<p id="gp"></p>
+		</li>
+		<li><a href="offers.html" target="disp"><button class="button">Offers</button></a>
+			<p id="offer"></p>
+		</li>
+		<li><a href="register.php" target="disp"><button class="button">Sign up</button></a>
+			<p id="registration"></p>
+		</li>
+		<li><a href="login.php" target="disp"><button class="button">Log in</button></a>
+			<p id="login"></p>
+		</li>
+		Browse By Genres;
+		<li><a href="list.html" target="disp"><button class="button">First-Person Shooter</button></a>
+			<p id="fps"></p>
+		</li>
+		<li><a href="list.html" target="disp"><button class="button">Strategy</button></a>
+			<p id="fps"></p>
+		</li>
+		<li><a href="list.html" target="disp"><button class="button">Roleplaying</button></a>
+			<p id="rpg"></p>
+		</li>
+		<li><a href="list.html" target="disp"><button class="button">MOBA</button></a>
+			<p id="moba"></p>
+		</li>
+		<li><a href="actiongames.html" target="disp"><button class="button">Action</button></a>
+			<p id="action"></p>
+		</li>

@@ -1,0 +1,68 @@
+<html>
+<style>
+fieldset{
+	background-image:url('scroll.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: 120% 120%;
+}
+body{
+  background-image: url('wowwall.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: 100% 100%;	
+}
+form{
+	margin: 0 auto;	
+	width: 250px;
+	margin-top:15%;
+}
+body.old{
+	font-style:italic;
+	color: yellow;
+	font-weight: bold;
+}
+</style>	
+<body class=old>
+<form id='registeration' action='register.php' method='post' 
+    accept-charset='UTF-8'>
+	
+<fieldset>
+<legend>REGISTER</legend>
+<input type='hidden' name='submitted' id='submitted' value='1'/>
+<label for='name' >Your Full Name</label>
+<br>
+<input type='text' name='name' id='name' maxlength="50" />
+<br>
+<label for='email' >Email Address</label>
+<br>
+<input type='text' name='email' id='email' maxlength="50" />
+<br>
+<label for='username' >UserName</label>
+<br>
+<input type='text' name='username' id='username' maxlength="50" />
+<br>
+<label for='password' >Password</label>
+<br>
+<input type='password' name='password' id='password' maxlength="50" />
+<br>
+<label for='birthdate' >Birth date</label>
+<br>
+<input type='textarea' 	name='birthdate' id='birthdate' maxlength="50" />
+<br>
+<label for='country' >Country</label>
+<br>
+<input type='text' 	name='Country' id='password' maxlength="50" />
+<br>
+<label for='address' >Address</label>
+<br>
+<input type='text' 	name='address' id='address' maxlength="50" />
+<br>
+<input type='submit' name='Submit' value='Register' />
+
+</fieldset>
+</font>
+</form>
+</html>
